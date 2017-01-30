@@ -1,0 +1,6 @@
+/xml/*
+/index.php
+/litresConfig.php
+/DB_Exception.txt
+/ALL_Exception.txt
+/.htaccess
