@@ -1,6 +1,6 @@
 <?php
 class LitresParserClass {
-    private static  $max_period     = 1296000;
+    private static  $max_period     = 1296000/15;//1296000 - 15 days
     private         $db_obj         = null;
     private         $api_conf       = null;
     private         $xml            = null;
@@ -198,8 +198,8 @@ class LitresParserClass {
         if ($referer !== null) {
             curl_setopt ($process , CURLOPT_REFERER , $referer);
         }
-        curl_setopt($process, CURLOPT_CONNECTTIMEOUT, 60*25);
-        curl_setopt($process, CURLOPT_TIMEOUT, 60*25);
+        curl_setopt($process, CURLOPT_CONNECTTIMEOUT, 60*15);
+        curl_setopt($process, CURLOPT_TIMEOUT, 60*15);
         @curl_setopt($process, CURLOPT_FOLLOWLOCATION, 1);
         $resalt = curl_exec($process);
         curl_close($process);
